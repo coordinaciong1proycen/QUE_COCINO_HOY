@@ -1,0 +1,454 @@
+/* ========================================
+   ¿QUÉ COCINO HOY?
+   ESTILOS GENERALES
+======================================== */
+
+:root {
+    --color-fondo: #F5F0E6;
+    --color-principal: #55745B;
+    --color-principal-oscuro: #405C46;
+    --color-acento: #E8A66A;
+    --color-blanco: #FFFFFF;
+    --color-texto: #303B32;
+    --color-suave: #7B8179;
+    --color-borde: #E8E3D9;
+    --color-error: #C45B50;
+    --color-ok: #55745B;
+
+    --radio: 14px;
+    --sombra: 0 5px 20px rgba(48, 59, 50, 0.07);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========================================
+   CABECERA
+======================================== */
+
+.cabecera {
+    width: 100%;
+    padding: 22px max(5%, calc((100% - 1100px) / 2));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-blanco);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-principal);
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo__icono {
+    font-size: 27px;
+}
+
+.cabecera__texto {
+    color: var(--color-suave);
+    font-size: 13px;
+}
+
+/* ========================================
+   CONTENEDOR
+======================================== */
+
+.contenedor {
+    width: min(1000px, 90%);
+    margin: 0 auto;
+    padding: 55px 0;
+    flex: 1;
+}
+
+/* ========================================
+   PRESENTACIÓN
+======================================== */
+
+.presentacion {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.presentacion__etiqueta,
+.resultados__etiqueta {
+    color: var(--color-principal);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.presentacion h1 {
+    margin: 15px 0;
+    font-size: clamp(28px, 5vw, 42px);
+    color: var(--color-texto);
+}
+
+.presentacion p {
+    color: var(--color-suave);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ========================================
+   BUSCADOR
+======================================== */
+
+.buscador {
+    padding: 30px;
+    background: var(--color-blanco);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.buscador label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.buscador__fila {
+    display: flex;
+    gap: 10px;
+}
+
+.buscador input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid var(--color-borde);
+    border-radius: 9px;
+    outline: none;
+    font-size: 14px;
+}
+
+.buscador input:focus {
+    border-color: var(--color-principal);
+    box-shadow: 0 0 0 3px rgba(85, 116, 91, 0.10);
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.buscador__fila button {
+    padding: 0 22px;
+    background: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+.buscador__fila button:hover,
+.boton-principal:hover {
+    background: var(--color-principal-oscuro);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* INGREDIENTES AÑADIDOS */
+
+.ingredientes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 18px;
+    min-height: 28px;
+}
+
+.ingredientes__vacio {
+    color: var(--color-suave);
+    font-size: 13px;
+}
+
+.ingrediente {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: #EAF1E9;
+    color: var(--color-principal-oscuro);
+    font-size: 13px;
+}
+
+.ingrediente button {
+    background: transparent;
+    color: var(--color-principal-oscuro);
+    font-size: 16px;
+    padding: 0;
+}
+
+/* BOTONES DEL BUSCADOR */
+
+.buscador__acciones {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.boton-principal,
+.boton-secundario {
+    padding: 13px 22px;
+}
+
+.boton-principal {
+    background: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+.boton-secundario {
+    background: #F1EEE7;
+    color: var(--color-texto);
+}
+
+.boton-secundario:hover {
+    background: #E8E3D9;
+}
+
+/* ========================================
+   RESULTADOS
+======================================== */
+
+.resultados {
+    margin-top: 55px;
+}
+
+.resultados__cabecera {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 23px;
+}
+
+.resultados__cabecera h2 {
+    margin-top: 8px;
+    font-size: 27px;
+}
+
+.contador {
+    color: var(--color-suave);
+    font-size: 13px;
+}
+
+/* ========================================
+   TARJETAS DE RECETAS
+======================================== */
+
+.recetas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-receta {
+    overflow: hidden;
+    background: var(--color-blanco);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.tarjeta-receta__cabecera {
+    min-height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E9EFE5;
+    font-size: 55px;
+}
+
+.tarjeta-receta__contenido {
+    padding: 22px;
+}
+
+.tarjeta-receta h3 {
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+.tarjeta-receta__tiempo {
+    color: var(--color-suave);
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.tarjeta-receta__coincidencia {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #EAF1E9;
+    color: var(--color-principal);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tarjeta-receta__ingredientes {
+    margin-bottom: 15px;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.tarjeta-receta__ingredientes strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.estado-disponible {
+    color: var(--color-ok);
+}
+
+.estado-faltante {
+    color: #A66B2E;
+}
+
+.boton-detalle {
+    width: 100%;
+    padding: 12px;
+    background: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+.boton-detalle:hover {
+    background: var(--color-principal-oscuro);
+}
+
+/* ========================================
+   DETALLE DE RECETA
+======================================== */
+
+.detalle-receta {
+    display: none;
+    margin-top: 16px;
+    padding-top: 15px;
+    border-top: 1px solid var(--color-borde);
+}
+
+.detalle-receta.visible {
+    display: block;
+}
+
+.detalle-receta h4 {
+    margin: 12px 0 7px;
+    font-size: 14px;
+}
+
+.detalle-receta p,
+.detalle-receta li {
+    color: var(--color-suave);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.detalle-receta ol {
+    padding-left: 20px;
+}
+
+/* ========================================
+   MENSAJES
+======================================== */
+
+.mensaje-inicial,
+.mensaje-vacio {
+    grid-column: 1 / -1;
+    padding: 45px 20px;
+    text-align: center;
+    background: var(--color-blanco);
+    border-radius: var(--radio);
+}
+
+.mensaje-inicial span,
+.mensaje-vacio span {
+    font-size: 42px;
+}
+
+.mensaje-inicial h3,
+.mensaje-vacio h3 {
+    margin: 12px 0;
+}
+
+.mensaje-inicial p,
+.mensaje-vacio p {
+    color: var(--color-suave);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ========================================
+   PIE DE PÁGINA
+======================================== */
+
+.pie {
+    padding: 22px;
+    text-align: center;
+    background: var(--color-blanco);
+    border-top: 1px solid var(--color-borde);
+}
+
+.pie p {
+    color: var(--color-suave);
+    font-size: 12px;
+}
+
+/* ========================================
+   DISEÑO RESPONSIVE
+======================================== */
+
+@media (max-width: 650px) {
+
+    .cabecera {
+        padding: 18px 5%;
+    }
+
+    .cabecera__texto {
+        display: none;
+    }
+
+    .contenedor {
+        padding: 35px 0;
+    }
+
+    .buscador {
+        padding: 20px;
+    }
+
+    .buscador__fila {
+        flex-direction: column;
+    }
+
+    .buscador__fila button {
+        padding: 13px;
+    }
+
+    .recetas {
+        grid-template-columns: 1fr;
+    }
+
+    .resultados__cabecera h2 {
+        font-size: 23px;
+    }
+
+}
