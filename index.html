@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encuentra recetas deliciosas con los ingredientes que tienes en casa.">
+    <title>¿Qué cocino hoy?</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/recetas.js" defer></script>
+</head>
+<body>
+
+    <header class="cabecera">
+        <a href="index.html" class="logo">
+            <span class="logo__icono">🍃</span>
+            ¿Qué cocino hoy?
+        </a>
+        <span class="cabecera__texto">Tu recetario inteligente</span>
+    </header>
+
+    <main class="contenedor">
+
+        <section class="presentacion">
+            <span class="presentacion__etiqueta">COCINA FÁCIL · APROVECHA LO QUE TIENES</span>
+
+            <h1>¿Qué tienes en la nevera?</h1>
+
+            <p>
+                Introduce tus ingredientes y descubre qué recetas
+                puedes preparar hoy.
+            </p>
+        </section>
+
+        <section class="buscador">
+
+            <label for="ingrediente">
+                Tus ingredientes disponibles
+            </label>
+
+            <div class="buscador__fila">
+                <input
+                    type="text"
+                    id="ingrediente"
+                    placeholder="Ej. tomate, huevo, arroz..."
+                    autocomplete="off"
+                >
+
+                <button type="button" id="btn-anadir">
+                    Añadir
+                </button>
+            </div>
+
+            <div id="lista-ingredientes" class="ingredientes">
+                <span class="ingredientes__vacio">
+                    Todavía no has añadido ingredientes.
+                </span>
+            </div>
+
+            <div class="buscador__acciones">
+                <button type="button" id="btn-buscar" class="boton-principal">
+                    Buscar recetas
+                </button>
+
+                <button type="button" id="btn-limpiar" class="boton-secundario">
+                    Limpiar
+                </button>
+            </div>
+
+        </section>
+
+        <section class="resultados">
+
+            <div class="resultados__cabecera">
+                <div>
+                    <span class="resultados__etiqueta">INSPIRACIÓN PARA HOY</span>
+                    <h2>Recetas para ti</h2>
+                </div>
+
+                <span id="contador-recetas" class="contador"></span>
+            </div>
+
+            <div id="lista-recetas" class="recetas">
+                <div class="mensaje-inicial">
+                    <span>🥕</span>
+                    <h3>¡Empecemos a cocinar!</h3>
+                    <p>
+                        Añade algunos ingredientes y descubre
+                        qué puedes preparar con ellos.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <p>¿Qué cocino hoy? · Cocina fácil, aprovecha cada ingrediente.</p>
+    </footer>
+
+</body>
+</html>
