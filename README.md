@@ -1,4 +1,4 @@
-# 🍃 ¿Qué cocino hoy? - Versión de David
+# 🍃 ¿Qué cocino hoy?
 
 ## Descripción
 
