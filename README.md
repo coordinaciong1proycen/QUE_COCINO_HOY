@@ -1,4 +1,4 @@
-# 🍃 ¿Qué cocino hoy? - Versión de Marina
+# 🍃 ¿Qué cocino hoy?
 
 ## Descripción
 
